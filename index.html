@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodata Lengkap Anggota VERTIX</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #1a1a2e;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+            gap: 20px;
+        }
+        .card {
+            background-color: #fff;
+            width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.2s;
+            cursor: pointer;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+        .card-content {
+            padding: 15px;
+        }
+        .card-content h2 {
+            margin: 0;
+            color: #1a1a2e;
+        }
+        .card-content p {
+            margin: 5px 0;
+            color: #333;
+        }
+        .card-content span {
+            font-weight: bold;
+        }
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 10;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.7);
+        }
+        .modal-content {
+            background-color: #fff;
+            margin: 10% auto;
+            padding: 20px;
+            width: 80%;
+            max-width: 600px;
+            border-radius: 10px;
+            position: relative;
+        }
+        .close {
+            color: #aaa;
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .close:hover {
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Biodata Lengkap Anggota VERTIX</h1>
+    </header>
+
+    <div class="container">
+        <!-- Contoh card anggota -->
+        <div class="card" onclick="showModal('Rendra','백현준 (Baek Hyeonjun)','Main Rapper','2001 January 30','Amerika')">
+            <img src="Rendra.jpg" alt="Rendra">
+            <div class="card-content">
+                <h2>Rendra</h2>
+                <p><span>Posisi:</span> Main Rapper</p>
+            </div>
+        </div>
+
+        <div class="card" onclick="showModal('Maul','윤지호 (Yoon Jiho)','Face of the Group, Lead Rapper','2002 June 14','Korea')">
+            <img src="Maul.jpg" alt="Maul">
+            <div class="card-content">
+                <h2>Maul</h2>
+                <p><span>Posisi:</span> Face of the Group, Lead Rapper</p>
+            </div>
+        </div>
+
+        <div class="card" onclick="showModal('Rivaldo','정민규 (Jeong Mingyu)','Leader, Lead Vocal','2002 July 5','Kanada')">
+            <img src="Rivaldo.jpg" alt="Rivaldo">
+            <div class="card-content">
+                <h2>Rivaldo</h2>
+                <p><span>Posisi:</span> Leader, Lead Vocal</p>
+            </div>
+        </div>
+
+        <div class="card" onclick="showModal('Joko','나카무라 하루토 (Nakamura Haruto)','Lead Dancer','2002 September 5','Jepang')">
+            <img src="Joko.jpg" alt="Joko">
+            <div class="card-content">
+                <h2>Joko</h2>
+                <p><span>Posisi:</span> Lead Dancer</p>
+            </div>
+        </div>
+
+        <div class="card" onclick="showModal('Izza','리톈하오 (Li Tianhao)','Main Dancer','2002 October 6','China')">
+            <img src="Izza.jpg" alt="Izza">
+            <div class="card-content">
+                <h2>Izza</h2>
+                <p><span>Posisi:</span> Main Dancer</p>
+            </div>
+        </div>
+
+        <div class="card" onclick="showModal('Alfan','박준호 (Park Junho)','Sub Rapper','2002 December 24','Korea')">
+            <img src="Alfan.jpg" alt="Alfan">
+            <div class="card-content">
+                <h2>Alfan</h2>
+                <p><span>Posisi:</span> Sub Rapper</p>
+            </div>
+        </div>
+
+        <div class="card" onclick="showModal('Aldo','김태성 (Kim Taeseong)','Center, Main Vocal','2003 January 11','Korea')">
+            <img src="Aldo.jpg" alt="Aldo">
+            <div class="card-content">
+                <h2>Aldo</h2>
+                <p><span>Posisi:</span> Center, Main Vocal</p>
+            </div>
+        </div>
+
+        <div class="card" onclick="showModal('Iuz','최도현 (Choi Dohyun)','Visual, Sub Dancer','2003 March 21','Korea')">
+            <img src="Iuz.jpg" alt="Iuz">
+            <div class="card-content">
+                <h2>Iuz</h2>
+                <p><span>Posisi:</span> Visual, Sub Dancer</p>
+            </div>
+        </div>
+
+        <div class="card" onclick="showModal('Aldi','이찬율 (Lee Chanyul)','Maknae, Sub Vocal','2003 August 9','Korea')">
+            <img src="Aldi.jpg" alt="Aldi">
+            <div class="card-content">
+                <h2>Aldi</h2>
+                <p><span>Posisi:</span> Maknae, Sub Vocal</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modalName"></h2>
+            <p><strong>Nama Korea:</strong> <span id="modalKorean"></span></p>
+            <p><strong>Posisi:</strong> <span id="modalPosition"></span></p>
+            <p><strong>Tanggal Lahir:</strong> <span id="modalBirth"></span></p>
+            <p><strong>Negara:</strong> <span id="modalCountry"></span></p>
+        </div>
+    </div>
+
+    <script>
+        function showModal(name, korean, position, birth, country) {
+            document.getElementById('modalName').innerText = name;
+            document.getElementById('modalKorean').innerText = korean;
+            document.getElementById('modalPosition').innerText = position;
+            document.getElementById('modalBirth').innerText = birth;
+            document.getElementById('modalCountry').innerText = country;
+            document.getElementById('modal').style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            if (event.target == document.getElementById('modal')) {
+                closeModal();
+            }
+        }
+    </script>
+</body>
+</html>
